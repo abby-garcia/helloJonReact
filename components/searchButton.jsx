@@ -2,6 +2,7 @@ import React from 'react';
 
 class SearchBar extends React.Component {
     onButtonClick() {
+        debugger;
         alert("You have clicked me!!");
     }
 

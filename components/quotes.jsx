@@ -1,11 +1,15 @@
 import React from 'react';
-class randomQuoteGenrator extends React.Component {
+
+
+
+var randomQuoteGenrator extends React.Component {
   getInitialState: function(){ // setting inital state for the component
     return{
       currentQuote:this.getRandomQuote()
     }
   }
 
+getRandomQuote: function(){
   var quotes=[
   {
     quote: "Why fit in when you were born to stand out?",
@@ -110,7 +114,7 @@ class randomQuoteGenrator extends React.Component {
   return quotes[random];
 
   function randomGen(max,min){
-    return Math.florr(Math.random() * max - min)) + min;
+    return Math.floor(Math.random() * max - min)) + min;
 
   }
 },
@@ -118,6 +122,11 @@ class randomQuoteGenrator extends React.Component {
 
 render: function(){
     return(
+      <div className = "main-container">
+      
+
+
+      </div>
 
 
 

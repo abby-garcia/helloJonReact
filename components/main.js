@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Hello from './hello';
-import SearchBar from './searchButton';
+import SearchButton from './searchButton';
 import Motivation from './motivationLine';
 
 class Main extends React.Component {
