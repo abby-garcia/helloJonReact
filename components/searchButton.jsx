@@ -8,8 +8,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div>
-                <input type="text" placeholder="Search your favorite musical" />
-                <button onClick={this.onButtonClick}>Go search now!!!</button>
+              <button id="quoteButton" onClick={this.onButtonClick}>Get your quote today!</button>
             </div>
         )
     }

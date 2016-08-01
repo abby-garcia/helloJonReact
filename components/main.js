@@ -9,8 +9,8 @@ class Main extends React.Component {
         return (
             <div>
                 <Hello/>
-                <SearchButton/>
                 <Motivation/>
+                <SearchButton/>
             </div>
         )
     }
