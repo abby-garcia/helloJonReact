@@ -19776,6 +19776,10 @@
 
 	var _motivationLine2 = _interopRequireDefault(_motivationLine);
 
+	var _quotes = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./quotes\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _quotes2 = _interopRequireDefault(_quotes);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19801,7 +19805,8 @@
 	                null,
 	                _react2.default.createElement(_hello2.default, null),
 	                _react2.default.createElement(_motivationLine2.default, null),
-	                _react2.default.createElement(_searchButton2.default, null)
+	                _react2.default.createElement(_searchButton2.default, null),
+	                _react2.default.createElement(_quotes2.default, null)
 	            );
 	        }
 	    }]);
@@ -19896,8 +19901,8 @@
 	    _createClass(SearchBar, [{
 	        key: "onButtonClick",
 	        value: function onButtonClick() {
-	            debugger;
-	            alert("You have clicked me!!");
+	            RandomQuoteGenerator();
+	            // on button click, we need this to call a quotes function so it can appear on the screen!
 	        }
 	    }, {
 	        key: "render",
@@ -19908,7 +19913,7 @@
 	                _react2.default.createElement(
 	                    "button",
 	                    { id: "quoteButton", onClick: this.onButtonClick },
-	                    "Get your quote today!"
+	                    "Get ready to laugh!"
 	                )
 	            );
 	        }

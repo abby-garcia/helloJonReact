@@ -2,14 +2,14 @@ import React from 'react';
 
 class SearchBar extends React.Component {
     onButtonClick() {
-        debugger;
-        alert("You have clicked me!!");
+      RandomQuoteGenerator();
+        // on button click, we need this to call a quotes function so it can appear on the screen!
     }
 
     render() {
         return (
             <div>
-              <button id="quoteButton" onClick={this.onButtonClick}>Get your quote today!</button>
+              <button id="quoteButton" onClick={this.onButtonClick}>Get ready to laugh!</button>
             </div>
         )
     }

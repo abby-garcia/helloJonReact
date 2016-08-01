@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-
-var randomQuoteGenrator extends React.Component {
+class RandomQuoteGenerator extends React.Component {
   getInitialState: function(){ // setting inital state for the component
     return{
       currentQuote:this.getRandomQuote()
@@ -119,21 +117,23 @@ getRandomQuote: function(){
   }
 },
 
+  handleRandomQuote: function(){
+    this.setState({
+      currentQuote:this.getRandomQuote()
+    });
+  },
 
-render: function(){
+  render: function(){
     return(
       <div className = "main-container">
-      
-
-
+        <QuoteContainer quote={ this.state.currentQuote.quote }
+        author={ this.state.currentQuote.author } />
       </div>
+    );
+  }
+});
 
 
 
 
-    )
-
-}
-
-
-export default randomQuoteGenrator;
+export default RandomQuoteGenerator;
