@@ -1,13 +1,18 @@
 import React from 'react';
 
 class RandomQuoteGenerator extends React.Component {
-  getInitialState: function(){ // setting inital state for the component
-    return{
-      currentQuote:this.getRandomQuote()
-    }
+  // getInitialState(){ // setting inital state for the component
+  //   return{
+  //     currentQuote:this.getRandomQuote()
+  //   }
+  // }
+
+   state = { //this is where we initalize the state in a class component based Component
+    currentQuote:null  // we're define it
   }
 
-getRandomQuote: function(){
+
+getRandomQuote(){
   var quotes=[
   {
     quote: "Why fit in when you were born to stand out?",
@@ -109,29 +114,52 @@ getRandomQuote: function(){
 ];
 
   var random = randomGen(0, quotes.length -1);
+  console.log(random);
   return quotes[random];
 
   function randomGen(max,min){
-    return Math.floor(Math.random() * max - min)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 
   }
-},
+}
 
-  handleRandomQuote: function(){
+  // componentWillMount(){ // a method that will be executed before it's rendered
+  //   var q = this.getRandomQuote();
+  //   debugger;
+  //   this.setState({
+  //     currentQuote:q
+  //   });
+  // }
+
+  onButtonClick() {
+    debugger;
+    var q = this.getRandomQuote();
     this.setState({
-      currentQuote:this.getRandomQuote()
+      currentQuote:q
     });
-  },
+  }
 
-  render: function(){
+
+
+  render(){
     return(
       <div className = "main-container">
-        <QuoteContainer quote={ this.state.currentQuote.quote }
-        author={ this.state.currentQuote.author } />
+      <div>
+        <button id="quoteButton" onClick={this.onButtonClick.bind(this)}>Get ready to laugh!</button>
+      </div>
+      {
+        this.state.currentQuote == null? <p> Click the button! </p>:
+        <div>
+          <p> {this.state.currentQuote.quote } </p>
+          <p>{ this.state.currentQuote.name } </p>
+        </div>
+      }
+
+
       </div>
     );
   }
-});
+};
 
 
 

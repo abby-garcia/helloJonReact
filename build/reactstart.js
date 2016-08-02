@@ -19768,15 +19768,11 @@
 
 	var _hello2 = _interopRequireDefault(_hello);
 
-	var _searchButton = __webpack_require__(161);
-
-	var _searchButton2 = _interopRequireDefault(_searchButton);
-
-	var _motivationLine = __webpack_require__(162);
+	var _motivationLine = __webpack_require__(161);
 
 	var _motivationLine2 = _interopRequireDefault(_motivationLine);
 
-	var _quotes = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./quotes\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _quotes = __webpack_require__(162);
 
 	var _quotes2 = _interopRequireDefault(_quotes);
 
@@ -19805,7 +19801,6 @@
 	                null,
 	                _react2.default.createElement(_hello2.default, null),
 	                _react2.default.createElement(_motivationLine2.default, null),
-	                _react2.default.createElement(_searchButton2.default, null),
 	                _react2.default.createElement(_quotes2.default, null)
 	            );
 	        }
@@ -19869,65 +19864,6 @@
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SearchBar = function (_React$Component) {
-	    _inherits(SearchBar, _React$Component);
-
-	    function SearchBar() {
-	        _classCallCheck(this, SearchBar);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(SearchBar).apply(this, arguments));
-	    }
-
-	    _createClass(SearchBar, [{
-	        key: "onButtonClick",
-	        value: function onButtonClick() {
-	            RandomQuoteGenerator();
-	            // on button click, we need this to call a quotes function so it can appear on the screen!
-	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                null,
-	                _react2.default.createElement(
-	                    "button",
-	                    { id: "quoteButton", onClick: this.onButtonClick },
-	                    "Get ready to laugh!"
-	                )
-	            );
-	        }
-	    }]);
-
-	    return SearchBar;
-	}(_react2.default.Component);
-
-	exports.default = SearchBar;
-
-/***/ },
-/* 162 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -19976,6 +19912,204 @@
 	}(_react2.default.Component);
 
 	exports.default = MotivationLine;
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RandomQuoteGenerator = function (_React$Component) {
+	  _inherits(RandomQuoteGenerator, _React$Component);
+
+	  function RandomQuoteGenerator() {
+	    var _Object$getPrototypeO;
+
+	    var _temp, _this, _ret;
+
+	    _classCallCheck(this, RandomQuoteGenerator);
+
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(RandomQuoteGenerator)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = { //this is where we initalize the state in a class component based Component
+	      currentQuote: null // we're define it
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+	  // getInitialState(){ // setting inital state for the component
+	  //   return{
+	  //     currentQuote:this.getRandomQuote()
+	  //   }
+	  // }
+
+	  _createClass(RandomQuoteGenerator, [{
+	    key: "getRandomQuote",
+	    value: function getRandomQuote() {
+	      var quotes = [{
+	        quote: "Why fit in when you were born to stand out?",
+	        name: "Dr.Seuss"
+	      }, {
+	        quote: "My greatest pain in life is that I will never be able to see myself perform live.",
+	        name: "Kanye West"
+	      }, {
+	        quote: "It's never too late - never to late to start over, never too late to be happy.",
+	        name: "Jane Fonda"
+	      }, {
+	        quote: "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+	        name: "Dr.Seuss"
+	      }, {
+	        quote: "You're off to Great Places! Today is your day! Your mountain is waiting, So... get on your way!",
+	        name: "Dr.Seuss"
+	      }, {
+	        quote: "The only person you should try to be better than is the person you were yesterday.",
+	        name: "Anonymous"
+	      }, {
+	        quote: "Never be bullied into silence. Never allow yourself to be made a victim. Accept no one’s definition of your life; define yourself.",
+	        name: "Harvey Fierstein"
+	      }, {
+	        quote: "I can be changed by what happens to me but I refuse to be reduced by it.",
+	        name: "Maya Angelou"
+	      }, {
+	        quote: "Expect problems and eat them for breakfast.",
+	        name: "Alfred A. Montapert"
+	      }, {
+	        quote: "Start where you are. Use what you have. Do what you can.",
+	        name: "Arthur Ashe"
+	      }, {
+	        quote: "Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.",
+	        name: "Samuel Beckett"
+	      }, {
+	        quote: "Be yourself; everyone else is already taken.",
+	        name: "Oscar Wilde"
+	      }, {
+	        quote: "Believe you can and you’re halfway there.",
+	        name: "T. Roosevelt"
+	      }, {
+	        quote: "There is no elevator to success — you have to take the stairs.",
+	        name: "Anonymous"
+	      }, {
+	        quote: "Do not take life too seriously. You will never get out of it alive.",
+	        name: "Elbert Hubbard"
+	      }, {
+	        quote: "It does not do to dwell on dreams and forget to live.",
+	        name: "Albus Dumbledore"
+	      }, {
+	        quote: "Procrastination is the art of keeping up with yesterday.",
+	        name: "Don Marquis"
+	      }, {
+	        quote: "Get your facts first, then you can distort them as you please.",
+	        name: "Mark Twain"
+	      }, {
+	        quote: "A day without sunshine is like, you know, night.",
+	        name: "Steve Martin"
+	      }, {
+	        quote: "“Do what you feel in your heart to be right, for you’ll be criticized anyway.",
+	        name: "Eleanor Roosevelt"
+	      }, {
+	        quote: "Don't sweat the petty things and don't pet the sweaty things.",
+	        name: "George Carlin"
+	      }, {
+	        quote: "Always do whatever's next.",
+	        name: "George Carlin"
+	      }, {
+	        quote: "Atheism is a non-prophet organization.",
+	        name: "George Carlin"
+	      }, {
+	        quote: "Hapiness is not something ready made. It comes from your own actions.",
+	        name: "Dalai Lama"
+	      }];
+
+	      var random = randomGen(0, quotes.length - 1);
+	      console.log(random);
+	      return quotes[random];
+
+	      function randomGen(max, min) {
+	        return Math.floor(Math.random() * (max - min + 1)) + min;
+	      }
+	    }
+
+	    // componentWillMount(){ // a method that will be executed before it's rendered
+	    //   var q = this.getRandomQuote();
+	    //   debugger;
+	    //   this.setState({
+	    //     currentQuote:q
+	    //   });
+	    // }
+
+	  }, {
+	    key: "onButtonClick",
+	    value: function onButtonClick() {
+	      debugger;
+	      var q = this.getRandomQuote();
+	      this.setState({
+	        currentQuote: q
+	      });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "main-container" },
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "button",
+	            { id: "quoteButton", onClick: this.onButtonClick.bind(this) },
+	            "Get ready to laugh!"
+	          )
+	        ),
+	        this.state.currentQuote == null ? _react2.default.createElement(
+	          "p",
+	          null,
+	          " Click the button! "
+	        ) : _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            " ",
+	            this.state.currentQuote.quote,
+	            " "
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            this.state.currentQuote.name,
+	            " "
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return RandomQuoteGenerator;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = RandomQuoteGenerator;
 
 /***/ }
 /******/ ]);
